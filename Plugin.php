@@ -1,41 +1,41 @@
 <?php
 
-namespace Kanboard\Plugin\Wunderlist;
+namespace Kanboard\Plugin\DemoData;
 
-use Kanboard\Core\Translator;
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Security\Role;
 
 class Plugin extends Base {
   public function initialize() {
-    $this->applicationAccessMap->add('Wunderlist', '*', Role::APP_ADMIN);
+    $this->applicationAccessMap->add('DemoData', '*', Role::APP_ADMIN);
 
-    $this->template->hook->attach('template:config:sidebar', 'wunderlist:config/sidebar');
+    $this->template->hook->attach('template:config:sidebar', 'demodata:config/sidebar');
   }
 
-  public function onStartup() {
-      Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
-  }
+	public function getPluginName()
+    {
+        return 'Demo Data';
+    }
 
-  public function getPluginName() {
-    return 'Wunderlist';
-  }
+    public function getPluginDescription()
+    {
+        return 'Generates/resets Sample Data';
+    }
 
-  public function getPluginAuthor() {
-    return 'Maxime "Epoc" G.';
-  }
+    public function getPluginAuthor()
+    {
+        return 'Bruno Deshayes';
+    }
 
-  public function getPluginVersion() {
-    return '1.0.5';
-  }
+    public function getPluginVersion()
+    {
+        return '1.0.0';
+    }
 
-  public function getPluginDescription() {
-    return t('Allow you to import Wunderlist tasks and lists by uploading an export file');
-  }
-
-  public function getPluginHomepage() {
-    return 'https://github.com/EpocDotFr/kanboard-wunderlist';
-  }
+    public function getPluginHomepage()
+    {
+        return 'https://github.com/bdeshayes/html2pdf';
+    }
 
   public function getCompatibleVersion() {
     return '>=1.0.48';
