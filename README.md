@@ -1,9 +1,9 @@
 # DemoData plugin for Kanboard
 
-This plugin allow you to import generate sample data to evaluate Kanboard.
+This plugin allows you to generate some sample data in order to evaluate Kanboard.
 Why not just load a simple SQL file you might say?
 
-Well for a Scrum / Agile tool dates are critical so this plugin generate appropriate dates around today's date.
+Well for a Scrum / Agile tool dates are critical so this plugin generates appropriate dates around today's date.
 
 
 ## Prerequisites
