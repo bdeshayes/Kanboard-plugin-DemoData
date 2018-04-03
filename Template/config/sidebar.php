@@ -1,5 +1,5 @@
 <?php if ($this->user->isAdmin()): ?>
-<li <?= $this->app->getRouterController() === 'wunderlist' && $this->app->getRouterAction() === 'import' ? 'class="active"' : '' ?>>
-    <?= $this->url->link(t('Import from Wunderlist'), 'wunderlist', 'import', array('plugin' => 'wunderlist')) ?>
+<li <?= $this->app->getRouterController() === 'demodata' && $this->app->getRouterAction() === 'import' ? 'class="active"' : '' ?>>
+    <?= $this->url->link(t('Generate Demo Data'), 'demodata', 'import', array('plugin' => 'demodata')) ?>
 </li>
 <?php endif ?>
