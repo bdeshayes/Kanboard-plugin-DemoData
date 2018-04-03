@@ -32,7 +32,7 @@ It is very simple.
 
 ### Importing in Kanboard
 
-  1. Open Kanboard
+  1. Open Kanboard and login as the admin user
   2. Go to the **Settings** > **Generate Demo Data** menu
   3. Click on the **Generate** button
 
